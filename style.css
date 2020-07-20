@@ -1,0 +1,102 @@
+
+
+#container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;   
+}
+.my-4{
+border-bottom: 1px solid #282451;
+
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+.nav-item {
+margin: auto 10px;
+}
+.list-unstyled{
+    width: 50%;
+    margin-left : auto;
+    margin-right: auto;
+}
+.card{
+    margin: 20px;
+    width: 18rem;
+  
+}
+p.card-text{
+    margin-top: 20px;
+}
+.price{
+    background-color: #282451;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;   
+}
+details{
+    cursor: pointer;
+}
+.btn {
+    background-color: #282451;
+    opacity: 0.9;
+    color: #fff;
+    transition: opacity 0.2s ease-in;
+    margin-top : 10px;
+}
+
+.btn:hover{
+    background-color: #282451;
+    color: #fff;
+    opacity: 1;
+}
+
+h1, h2{
+    text-align: center;
+    margin-top: 20px;
+}
+h2{
+    border-bottom: 1px solid grey;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-shopping-cart{
+    
+    font-size: 25px;
+    padding: 5px;
+}
+img{
+    width: 150px;
+}
+.col-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+form{
+    width: 75%;
+    margin: 40px auto;
+    
+}
+.form-control{
+    width:  75%!important;
+    margin: 20px auto;
+}
+a{
+    
+    text-decoration: none!important;
+}
+table{
+    width: 75%!important;
+    margin: 30px auto;
+    border: 1px dotted grey;
+    
+   
+}
