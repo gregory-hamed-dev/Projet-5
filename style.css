@@ -7,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;   
+   
 }
 .my-4{
 border-bottom: 1px solid #282451;
@@ -26,7 +27,12 @@ margin: auto 10px;
 .card{
     margin: 20px;
     width: 18rem;
-  
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+   
+}
+
+.card-img-top{
+    cursor: pointer;
 }
 p.card-text{
     margin-top: 20px;
@@ -53,6 +59,12 @@ details{
     color: #fff;
     opacity: 1;
 }
+.teddy-price{
+    background-color: #282451;
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px
+}
 
 h1, h2{
     text-align: center;
@@ -68,6 +80,7 @@ h2{
     
     font-size: 25px;
     padding: 5px;
+    position: relative;
 }
 img{
     width: 150px;
@@ -96,7 +109,48 @@ a{
 table{
     width: 75%!important;
     margin: 30px auto;
-    border: 1px dotted grey;
-    
-   
+    border: 1px dotted grey;  
+}
+.badge{
+border-radius: 50%;
+float: right;
+position: absolute;
+top: 0;
+font-size: 14px;
+}
+.select-product{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);   
+    transition: 0.2s linear;
+    transform: scale(0);
+}
+.select-product.active{
+    transform: scale(1);
+}
+
+.cardSelect{
+    background: #fff;
+    width: 70%;
+    position: relative;
+    height : 65%;
+  
+}
+.fa-times-circle{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: royalblue;    
+}
+
+.table th{
+    vertical-align: middle!important;
 }
