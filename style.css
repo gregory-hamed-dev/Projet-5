@@ -3,10 +3,29 @@
 #container{
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
     flex-wrap: wrap;   
+    padding: 10px;
+    background-color: palegoldenrod;
+    
+}
+h1{
+    font-family: "Riesling";
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    margin-left: auto;
+    color: #282451;
+    margin-right: auto;
+    font-size: 3rem;
+    
+    
+}
+h3{
+    font-family: "Attraction Personal Use";
+    padding-top: 20px;
+    padding-bottom: 20px;
    
 }
 .my-4{
@@ -18,6 +37,7 @@ border-bottom: 1px solid #282451;
 }
 .nav-item {
 margin: auto 10px;
+font-family: "domine";
 }
 .list-unstyled{
     width: 50%;
@@ -26,14 +46,44 @@ margin: auto 10px;
 }
 .card{
     margin: 20px;
-    width: 18rem;
+    width: 20rem;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-   
+    border: thick double goldenrod;
+}
+option{
+    background: burlywood;
 }
 
-.card-img-top{
-    cursor: pointer;
+.card-body{
+    display: flex;
+    flex-direction: column;
 }
+.button.text-center{
+    background: burlywood;
+    border-radius: 20px;
+    color: brown;
+    font-family: 'roboto';
+    padding: 5px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s linear;
+    cursor: pointer;
+    
+}
+a{
+    color: brown;
+}
+.button.text-center:hover{
+    background-color: bisque;
+    animation: background-color;
+    
+}
+.fa-paw{
+ color: #282451;
+ margin-right: 5px;
+}
+
 p.card-text{
     margin-top: 20px;
 }
@@ -118,38 +168,7 @@ position: absolute;
 top: 0;
 font-size: 14px;
 }
-.select-product{
-    position: fixed;
-    top:0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.8);   
-    transition: 0.2s linear;
-    transform: scale(0);
-}
-.select-product.active{
-    transform: scale(1);
-}
 
-.cardSelect{
-    background: #fff;
-    width: 70%;
-    position: relative;
-    height : 65%;
-  
-}
-.fa-times-circle{
-    position:absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
-    color: royalblue;    
-}
 
 .table th{
     vertical-align: middle!important;
