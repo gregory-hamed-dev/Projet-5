@@ -1,5 +1,7 @@
 
-
+body{
+    font-family: "roboto";
+}
 #container{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -47,7 +49,7 @@ font-family: "domine";
 .card{
     margin: 20px;
     width: 20rem;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 1px grey;
     border: thick double goldenrod;
 }
 option{
@@ -93,22 +95,7 @@ p.card-text{
     padding: 5px;
     border-radius: 10px;   
 }
-details{
-    cursor: pointer;
-}
-.btn {
-    background-color: #282451;
-    opacity: 0.9;
-    color: #fff;
-    transition: opacity 0.2s ease-in;
-    margin-top : 10px;
-}
 
-.btn:hover{
-    background-color: #282451;
-    color: #fff;
-    opacity: 1;
-}
 .teddy-price{
     background-color: #282451;
     color: #fff;
@@ -116,15 +103,20 @@ details{
     padding: 5px
 }
 
-h1, h2{
+h1{
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
 }
 h2{
-    border-bottom: 1px solid grey;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Attraction Personal Use";
+    font-size: 2.5rem;
+    color: #282451;
+    text-decoration: underline;
 }
 .fa-shopping-cart{
     
@@ -135,6 +127,95 @@ h2{
 img{
     width: 150px;
 }
+
+/* mise en forme de la page produit*/
+.display-picture{
+    width: 75%; 
+    margin-bottom: 25px;
+    border: thick double goldenrod;  
+}
+.product{
+
+display: flex;
+justify-content: center;
+background-image: url(./images/ourson.jpg);
+padding-top: 20px;
+padding-bottom: 20px;
+
+}
+.information{
+    background:rgba(255, 255, 255, 0.9);
+    padding: 50px 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    border: thick double #282451; 
+    border-radius: 25px;
+    
+}
+.price-here{
+    background: rgba(40, 36, 81, 0.9);
+    color: white;
+    width: 10%;
+    padding: 5px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    font-family: "Dancing Script";
+    font-style: italic;
+}
+.description{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list{
+    display: flex;
+    margin-bottom: 20px;
+    background-color: cornsilk;
+    padding: 10px;
+    font-family: 'domine';
+    font-size: 1rem;
+    border-radius: 20px;
+    align-items: center;
+    color: brown;
+    width: 50%;
+    justify-content: center;
+}
+.color-list{
+    margin-left: 10px;
+}
+.fa-palette{
+    font-size: 1.5rem;
+    color: #282451;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+option{
+    background: cornsilk;
+    color: brown;
+}
+.panier{
+    background: #282451;
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'roboto';
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+.panier:hover{
+    background-color: bisque;
+    animation: background-color;
+    color: #282451;
+}
+
+/*fin mise en forme page produit*/
 .col-center{
     display: flex;
     justify-content: center;
