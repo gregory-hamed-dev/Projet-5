@@ -1,14 +1,6 @@
-
+/*Général*/
 body{
     font-family: "roboto";
-}
-#container{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;   
-    padding: 10px;
-    background-color: palegoldenrod;
-    
 }
 h1{
     font-family: "Riesling";
@@ -21,8 +13,17 @@ h1{
     color: #282451;
     margin-right: auto;
     font-size: 3rem;
-    
-    
+    text-align: center;
+    margin-top: 50px;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Attraction Personal Use";
+    font-size: 2.5rem;
+    color: #282451;
+    text-decoration: underline;
 }
 h3{
     font-family: "Attraction Personal Use";
@@ -30,6 +31,32 @@ h3{
     padding-bottom: 20px;
    
 }
+
+/*barre de navigation*/
+.col-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+a{
+    text-decoration: none!important;
+}
+
+
+/*Page accueil*/
+
+#container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;   
+    padding: 10px;
+    background-image: url(images/fond_accueil.png);
+    
+}
+
 .my-4{
 border-bottom: 1px solid #282451;
 
@@ -70,8 +97,7 @@ option{
     margin-left: auto;
     margin-right: auto;
     transition: 0.3s linear;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 a{
     color: brown;
@@ -103,21 +129,6 @@ p.card-text{
     padding: 5px
 }
 
-h1{
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 3rem;
-}
-h2{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: "Attraction Personal Use";
-    font-size: 2.5rem;
-    color: #282451;
-    text-decoration: underline;
-}
 .fa-shopping-cart{
     
     font-size: 25px;
@@ -129,6 +140,7 @@ img{
 }
 
 /* mise en forme de la page produit*/
+
 .display-picture{
     width: 75%; 
     margin-bottom: 25px;
@@ -163,7 +175,7 @@ padding-bottom: 20px;
     margin-top: 20px;
     border-radius: 20px;
     font-size: 1.25rem;
-    font-family: "Dancing Script";
+    font-family: "roboto";
     font-style: italic;
 }
 .description{
@@ -200,7 +212,6 @@ option{
 }
 .panier{
     background: #282451;
-    border-radius: 20px;
     color: #fff;
     font-family: 'roboto';
     padding: 10px;
@@ -208,22 +219,68 @@ option{
     margin-right: auto;
     transition: 0.3s linear;
     cursor: pointer;
+    box-shadow: 2px 2px grey;
+}
+.hide{
+    display: none;
 }
 .panier:hover{
     background-color: bisque;
     animation: background-color;
     color: #282451;
 }
+.badge{
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: 7px;
+    font-size: 14px;
+    }
 
-/*fin mise en forme page produit*/
-.col-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    margin: auto;
+/*le panier*/
+
+
+table{
+    width: 75%!important;
+    margin: 30px auto;
+    border: 1px dotted grey;  
+    
 }
+.table th{
+    vertical-align: middle!important;
+}
+
+.remove{
+    background-color: indianred;
+    color: ivory;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.fa-minus{
+    margin-right: 15px;
+    background-color: lawngreen;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.fa-plus{
+    margin-left: 15px;
+    background-color: khaki;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.total-price{
+text-align: center;
+font-size: 1.5rem;
+background-color: lemonchiffon;
+}
+.text-default{
+    text-align: center;
+    text-transform: uppercase;
+}
+
 form{
     width: 75%;
     margin: 40px auto;
@@ -232,25 +289,4 @@ form{
 .form-control{
     width:  75%!important;
     margin: 20px auto;
-}
-a{
-    
-    text-decoration: none!important;
-}
-table{
-    width: 75%!important;
-    margin: 30px auto;
-    border: 1px dotted grey;  
-}
-.badge{
-border-radius: 50%;
-float: right;
-position: absolute;
-top: 0;
-font-size: 14px;
-}
-
-
-.table th{
-    vertical-align: middle!important;
 }
