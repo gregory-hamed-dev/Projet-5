@@ -1,6 +1,6 @@
 //Requête pour récupérer touts les informations produits sur le serveur
 const request = new XMLHttpRequest();
-request.open('get', 'http://localhost:3000/api/teddies', true);
+request.open('get', 'http://localhost:3000/api/teddies/', true);
 request.send();
 request.onreadystatechange = function(data){
     if(this.readyState === 4  && this.status === 200){
@@ -24,7 +24,9 @@ request.onreadystatechange = function(data){
         }      
     } 
 } 
-
+if (localStorage.getItem("cardSelection") !== null) {
+    document.querySelector(".badge-danger").textContent = Object.keys(JSON.parse(localStorage.getItem("cardSelection"))).length
+}
 
 
             

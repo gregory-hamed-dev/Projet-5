@@ -16,9 +16,9 @@ const teddy = async (teddyUrl, teddyId) => {
 //fonction qui récupére les informations détaillées du produit demandé par l'utilisateur
 const TeddyDetails = (Data) => {
     mainContainer.innerHTML = `
-        <div class="product">
+        <article class="product">
             <div class="information">
-                <p class ="button text-center" style="width: 25%">
+                <p class ="button-page text-center">
                     <a href="../index.html"><i class="fas fa-paw"></i>Revenir à l'accueil</a>
                 </p>
                 <h2 class="product-title">${Data.name}</h2>
@@ -26,12 +26,12 @@ const TeddyDetails = (Data) => {
                 <p class="price-here">${Data.price}€</p>
                 <p class="description">${Data.description}</p>
                 <div class="list">
-                    <label for="color-select"><i class="fas fa-palette"></i>Choix de la couleur :</label>
+                    <label for="color-select">Couleur</label>
                     <select name="colors" class="color-list"></select>
                 </div>
                 <p class="panier">Ajouter un câlin</p>
             </div>
-        </div>`
+        </article>`
     for (let colour of Data.colors) {
         document.querySelector(".color-list").appendChild(document.createElement("option")).innerText = colour;
     };
@@ -64,7 +64,9 @@ const addSelection = (Data) => {
         location.reload(true); 
         
     })
-    document.querySelector(".badge-danger").textContent = Object.keys(JSON.parse(localStorage.getItem("cardSelection"))).length
+    if (localStorage.getItem("cardSelection") !== null) {
+        document.querySelector(".badge-danger").textContent = Object.keys(JSON.parse(localStorage.getItem("cardSelection"))).length
+    }
 }
 Product()
 

@@ -44,6 +44,20 @@ h3{
 a{
     text-decoration: none!important;
 }
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+.nav-item {
+margin: auto 10px;
+font-family: "domine";
+
+}
+
+.list-unstyled{
+    width: 50%;
+    margin-left : auto;
+    margin-right: auto;
+}
 
 
 /*Page accueil*/
@@ -61,18 +75,7 @@ a{
 border-bottom: 1px solid #282451;
 
 }
-.navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
-}
-.nav-item {
-margin: auto 10px;
-font-family: "domine";
-}
-.list-unstyled{
-    width: 50%;
-    margin-left : auto;
-    margin-right: auto;
-}
+
 .card{
     margin: 20px;
     width: 20rem;
@@ -87,26 +90,7 @@ option{
     display: flex;
     flex-direction: column;
 }
-.button.text-center{
-    background: burlywood;
-    border-radius: 20px;
-    color: brown;
-    font-family: 'roboto';
-    padding: 5px;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.3s linear;
-    cursor: pointer; 
-}
-a{
-    color: brown;
-}
-.button.text-center:hover{
-    background-color: bisque;
-    animation: background-color;
-    
-}
+
 .fa-paw{
  color: #282451;
  margin-right: 5px;
@@ -135,59 +119,107 @@ p.card-text{
     padding: 5px;
     position: relative;
 }
+.button.text-center{
+    background: burlywood;
+    border-radius: 20px;
+    color: brown;
+    font-family: 'roboto';
+    padding: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s linear;
+    cursor: pointer; 
+}
+a{
+    color: brown;
+}
+.button.text-center:hover{
+    background-color: bisque;
+    animation: background-color;
+}    
 img{
     width: 150px;
 }
 
 /* mise en forme de la page produit*/
 
-.display-picture{
-    width: 75%; 
-    margin-bottom: 25px;
-    border: thick double goldenrod;  
+#main-container{
+    background-image: url("./images/fond_accueil.png");
 }
-.product{
 
-display: flex;
-justify-content: center;
-background-image: url(./images/ourson.jpg);
-padding-top: 20px;
-padding-bottom: 20px;
-
+.button-page.text-center{
+    background: burlywood;
+    border-radius: 20px;
+    color: brown;
+    font-family: 'roboto';
+    padding: 5px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s linear;
+    cursor: pointer; 
+}
+a{
+    color: brown;
+}
+.button.text-center:hover{
+    background-color: bisque;
+    animation: background-color;
+    
+}
+.display-picture{
+    width: 80%; 
+    margin-bottom: 25px; 
+    box-shadow: 2px 3px grey;
+    
 }
 .information{
-    background:rgba(255, 255, 255, 0.9);
-    padding: 50px 20px;
-    width: 70%;
+    background: cornsilk;
+    padding: 50px 2px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;  
-    border: thick double #282451; 
-    border-radius: 25px;
+    border: double thick brown;
+    color: brown;
+    margin: 50px auto;
+    
+    position: relative;
+}
+.product-title{
+    
+    text-decoration: none;
+    background-color: rgba(165, 42, 42, 0.8);
+    color: cornsilk;
+    padding: 20px;
+    transform: rotate(5deg);
     
 }
 .price-here{
-    background: rgba(40, 36, 81, 0.9);
-    color: white;
-    width: 10%;
+    
+    width: 15%;
     padding: 5px;
     text-align: center;
     margin-top: 20px;
-    border-radius: 20px;
     font-size: 1.25rem;
-    font-family: "roboto";
-    font-style: italic;
+    font-family: "domine";
+    background-color: rgba(165, 42, 42, 0.8);
+    color: cornsilk;
+    transform: rotate(-5deg) 
+    
 }
 .description{
-    width: 50%;
+    margin-top: 25px;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .list{
     display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
-    background-color: cornsilk;
     padding: 10px;
     font-family: 'domine';
     font-size: 1rem;
@@ -199,20 +231,15 @@ padding-bottom: 20px;
 }
 .color-list{
     margin-left: 10px;
-}
-.fa-palette{
-    font-size: 1.5rem;
-    color: #282451;
-    margin-right: 10px;
-    margin-top: 5px;
+    
 }
 option{
     background: cornsilk;
     color: brown;
 }
 .panier{
-    background: #282451;
-    color: #fff;
+    background-color: rgba(165, 42, 42, 0.8);
+    color: cornsilk;
     font-family: 'roboto';
     padding: 10px;
     margin-left: auto;
@@ -235,6 +262,7 @@ option{
     top: -5px;
     right: 7px;
     font-size: 14px;
+    background-color: #DE2F88;
     }
 
 /*le panier*/
@@ -246,7 +274,7 @@ table{
     border: 1px dotted grey;  
     
 }
-.table th{
+.table th, .table td{
     vertical-align: middle!important;
 }
 
@@ -256,7 +284,13 @@ table{
     cursor: pointer;
     padding: 10px;
 }
-
+.head{
+    background: linear-gradient(45deg, goldenrod, brown);
+}
+small{
+    font-style: italic;
+    color: red;
+}
 .fa-minus{
     margin-right: 15px;
     background-color: lawngreen;
@@ -282,11 +316,20 @@ background-color: lemonchiffon;
 }
 
 form{
-    width: 75%;
+    width: 100%;
     margin: 40px auto;
     
 }
 .form-control{
     width:  75%!important;
     margin: 20px auto;
+}
+
+/*Page de confirmation*/
+.alert-heading{
+    margin: 20px;
+}
+.alert-success{
+    background: none;
+    background-color: blanchedalmond!important;
 }
