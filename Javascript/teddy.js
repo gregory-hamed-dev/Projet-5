@@ -1,11 +1,10 @@
 const url = "http://localhost:3000/api/teddies/"
 const getId = new URLSearchParams(window.location.search).get("id");
 const mainContainer = document.getElementById("main-container")
-
 //déclaration de la fonction principale de la page
 const Product = async () => {
     const data = await teddy(url, getId);
-    TeddyDetails(data);
+    teddyDetails(data);
     addSelection(data)
 };
 //fonction pour entrer en contact avec l'api
@@ -14,7 +13,7 @@ const teddy = async (teddyUrl, teddyId) => {
     return await response.json();
 };
 //fonction qui récupére les informations détaillées du produit demandé par l'utilisateur
-const TeddyDetails = (Data) => {
+const teddyDetails = (Data) => {
     mainContainer.innerHTML = `
         <article class="product">
             <div class="information">

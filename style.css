@@ -184,8 +184,6 @@ a{
     border: double thick brown;
     color: brown;
     margin: 50px auto;
-    
-    position: relative;
 }
 .product-title{
     
@@ -272,6 +270,7 @@ table{
     width: 75%!important;
     margin: 30px auto;
     border: 1px dotted grey;  
+    font-weight: bold;
     
 }
 .table th, .table td{
@@ -285,7 +284,11 @@ table{
     padding: 10px;
 }
 .head{
-    background: linear-gradient(45deg, goldenrod, brown);
+    background: url(./images/fond_accueil.png);
+    background-size: cover;
+}
+.table-image{
+    border-radius: 50%;
 }
 small{
     font-style: italic;
@@ -293,17 +296,19 @@ small{
 }
 .fa-minus{
     margin-right: 15px;
-    background-color: lawngreen;
+    background-color: #343a40;
+    color: ivory;
     border-radius: 50%;
     padding: 5px;
     cursor: pointer;
 }
 .fa-plus{
     margin-left: 15px;
-    background-color: khaki;
+    background-color: #343a40;
     border-radius: 50%;
     padding: 5px;
     cursor: pointer;
+    color: ivory;
 }
 .total-price{
 text-align: center;
@@ -332,4 +337,29 @@ form{
 .alert-success{
     background: none;
     background-color: blanchedalmond!important;
+}
+
+@media (max-width: 850px) { 
+    .information{
+        
+        width: 90%;
+    }
+    .product-title{
+        width: 90%;
+    }
+    .price-here{
+        width: 50%;
+    }
+    .form-control{
+        width: 100%!important;
+    }
+    form, th, td{
+        display: block;
+    }
+    thead{
+        display: none;
+    }
+    /*th{
+        background: #343a40!important;
+    }*/
 }
