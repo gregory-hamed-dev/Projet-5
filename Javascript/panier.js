@@ -52,8 +52,9 @@ const getItem = async (productId) => {
 };
 // Fonction pour afficher les produits du panier
 const renderCart = (imgUrl, name, color, price, quantity) => {
-  let article = document.querySelector(".product-list")
-  let trChild = document.createElement("tr")
+  const article = document.querySelector(".product-list")
+  const trChild = document.createElement("tr")
+  const int = new Intl.NumberFormat("fr-FR", {style: "currency", currency: "EUR", currencyDisplay: "symbol"})
   trChild.classList.add("text-center")
   article.appendChild(trChild)
   trChild.innerHTML = `
@@ -61,11 +62,11 @@ const renderCart = (imgUrl, name, color, price, quantity) => {
         <th class="head" scope="row"><img class="table-image" src="${imgUrl}"></th>
         <td>${name}</td>
         <td>${color}</td>
-        <td>${price}€</td>
+        <td>${int.format(price)}</td>
         <td><i class="fas fa-minus"></i><span class="quantity">${quantity}</span><i class="fas fa-plus"></i></td>
         <td><p class="remove "><i class="fas fa-trash-alt"></i></p></td>  
     </tr>`;
-  document.querySelector('.total-price').textContent = "Prix total : " + (totalprice += (price * quantity)) + "€"
+  document.querySelector('.total-price').textContent = "Prix total : " + int.format(totalprice += (price * quantity))
 };
 
 const deleteCart = (suppElement, container, productId) => {

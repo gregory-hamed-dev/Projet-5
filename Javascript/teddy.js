@@ -1,6 +1,7 @@
 const url = "http://localhost:3000/api/teddies/"
 const getId = new URLSearchParams(window.location.search).get("id");
 const mainContainer = document.getElementById("main-container")
+const int = new Intl.NumberFormat("fr-FR", {style: "currency", currency: "EUR", currencyDisplay: "symbol"})
 //déclaration de la fonction principale de la page
 const Product = async () => {
     const data = await teddy(url, getId);
@@ -22,7 +23,7 @@ const teddyDetails = (Data) => {
                 </p>
                 <h2 class="product-title">${Data.name}</h2>
                 <img class="display-picture" src="${Data.imageUrl}" alt="${Data.name}">
-                <p class="price-here">${Data.price}€</p>
+                <p class="price-here">${int.format(Data.price)}</p>
                 <p class="description">${Data.description}</p>
                 <div class="list">
                     <label for="color-select">Couleur</label>
