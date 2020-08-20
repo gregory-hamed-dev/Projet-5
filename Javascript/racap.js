@@ -7,3 +7,4 @@ document.querySelector(".alert-heading").textContent += " " + userName + "!";
 document.querySelector("#order").textContent += " " + orderId;
 document.querySelector("#command-price").textContent += " " + int.format(totalPrice);
 console.log(orderInformation)
+   
